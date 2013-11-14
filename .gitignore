@@ -1,0 +1,53 @@
+# Project specific ignores #
+############################
+*.jpg
+*.png
+*.gif
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Dreamweaver added files #
+###########################
+_notes
+dwsync.xml
+
+# Sublime #
+############
+*.sublime-workspace
+*.sublime-project
+
+# Komodo #
+##########
+*.komodoproject
+.komodotools
+
+# Espresso #
+############
+*.esproj
+*.espressostorage
+
+# Rubinius #
+############
+*.rbc
+
+# Folders to ignore #
+#####################
+.hg
+.svn
+.CVS
+.idea
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite

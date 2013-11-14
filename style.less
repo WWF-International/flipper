@@ -1,0 +1,48 @@
+
+// -----------------------------------------------------------------------------
+// Include if not developing on WWF server
+// -----------------------------------------------------------------------------
+// @import 'font/font-dev.less';
+
+// -----------------------------------------------------------------------------
+// Include for live version on the wwf.org.uk server
+// -----------------------------------------------------------------------------
+@import '../adoption/shared/css/2014/font-live.less'; 
+
+// -----------------------------------------------------------------------------
+// include these near the start - they shouldn't appear in the processed CSS.
+// -----------------------------------------------------------------------------
+@import '../adoption/shared/css/2014/variables-and-mixins.less'; 
+
+// -----------------------------------------------------------------------------
+// a level playing field - using normalise.css
+// -----------------------------------------------------------------------------
+@import '../adoption/shared/css/2014/normalise.less'; 
+
+// -----------------------------------------------------------------------------
+// Base rules are the defaults. They are almost exclusively single element
+// selectors but it could include attribute selectors, pseudo-class selectors,
+// child selectors or sibling selectors. Essentially, a base style says that
+// wherever this element is on the page, it should look like this.
+// This also includes the layout building blocks - this is our version of
+// Foundation / Bootstrap / etc
+// -----------------------------------------------------------------------------
+@import '../adoption/shared/css/2014/base.less';
+
+// -----------------------------------------------------------------------------
+// the layout building blocks - this is our version of Foundation or
+// Bootstrap etc
+// -----------------------------------------------------------------------------
+@import '../adoption/shared/css/2014/layout.less';
+
+// -----------------------------------------------------------------------------
+// Modules are the reusable, modular parts of our design. They are the callouts,
+// the sidebar sections, the product lists and so on.
+// -----------------------------------------------------------------------------
+@import '../adoption/shared/css/2014/modules.less';
+
+// -----------------------------------------------------------------------------
+// Any styles specifically for this page. Can be used for adjusting the modules
+// so they work within a specific layout
+// -----------------------------------------------------------------------------
+@import 'style/theme.less';

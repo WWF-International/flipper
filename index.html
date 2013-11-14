@@ -1,0 +1,175 @@
+<!doctype html>
+<!--[if lt IE 7]>  <html class="no-js ie ie6 ltie9 lte8 lte7" lang="en-GB"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js ie ie7 lte9 lte8 lte7" lang="en-GB"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js ie ie8 lte9 lte8" lang="en-GB"> <![endif]-->
+<!--[if IE 9]>     <html class="no-js ie ie9 lte9" lang="en-GB"> <![endif]-->
+<!--[if gt IE 9]>  <html class="no-js" lang="en-GB"> <![endif]-->
+<!--[if !IE]><!--> <html class="no-js" lang="en-GB"><!--<![endif]-->
+	<head>
+		<title>Card flip</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <meta http-equiv="imagetoolbar" content="false" />
+		<meta name="robots" content="noodp" />
+
+		<!-- 
+			The stylesheet contains:
+				* normalise.css
+				* other base WWF styles (see separate repository)
+				* other base module styles (see separate repository)
+				* style/theme.less - any styles specific to this page
+			 
+			This is all compiled and squished together with a {less} compiler for 
+			minimal http requests and the smallest possible filesize.
+		-->
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- 
+			Modernizr feature detection library available from modernizer.com 
+			This page requires checks for:
+			 	* CSS3 3D transforms
+			 	* CSS3 transforms
+			 	* CSS3 transitions
+		-->
+		<script src="/adoption/shared/js/2014/modernizr.min.js"></script>
+
+		<!--
+			jQuery 1.10, as jQuery 2.* drops support for Internet Explorer 8 (something
+			we can't do with the current number of visitor using IE8.)
+		-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="js/card-flip.js"></script>
+	</head>
+	<body>
+
+	<section id="house-of-cards" class="gallery cf">
+	    <ul>
+	    	<!-- 
+	    	The bare minimum markup for each card is as follows:
+	    	
+	    	<li class="card-wrapper">
+
+				// Link to an alternative to the other side of the card for visitors 
+				// without JavaScript enabled. This will return false when the 
+				// visitor has JavaScript turned on.	    		
+	    		<a href="alternative-link"> 
+
+	    			<h2 class="card">
+	    				// Content goes in here.
+	    			</h2>
+	    		</a>
+	    	</li>
+			-->
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-lion">
+					<h2 class="card lion-button" data-pid="663" data-species="lion">
+						<span class="wwf-button">Adopt a lion</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-tiger">
+					<h2 class="card tiger-button" data-pid="5" data-species="tiger">
+						<span class="wwf-button">Adopt a tiger</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-snow-leopard">
+					<h2 class="card snow-leopard-button" data-pid="431" data-species="snow-leopard">
+						<span class="wwf-button">Adopt a snow leopard</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-gorilla">
+				    <h2 class="card gorilla-button" data-pid="561" data-species="gorilla">
+				    	<span class="wwf-button">Adopt a mountain gorilla</span>
+				    </h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-jaguar">
+					<h2 class="card jaguar-button" data-pid="193" data-species="jaguar">
+						<span class="wwf-button">Adopt a jaguar</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-penguin">
+					<h2 class="card penguin-button" data-pid="10" data-species="penguin">
+						<span class="wwf-button">Adopt a penguin</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-turtle">
+					<h2 class="card turtle-button" data-pid="9" data-species="turtle">
+						<span class="wwf-button">Adopt a turtle</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-rhino">
+					<h2 class="card rhino-button" data-pid="7" data-species="rhino">
+						<span class="wwf-button">Adopt a rhino</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-an-orangutan">
+					<h2 class="card orangutan-button" data-pid="3" data-species="orangutan">
+						<span class="wwf-button">Adopt an orang-utan</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-an-elephant">
+					<h2 class="card elephant-button" data-pid="6" data-species="elephant">
+						<span class="wwf-button">Adopt an elephant</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-leopard">
+					<h2 class="card amur-leopard-button" data-pid="8" data-species="amur-leopard">
+						<span class="wwf-button">Adopt an Amur leopard</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-panda">
+					<h2 class="card giant-panda-button" data-pid="1" data-species="giant-panda">
+						<span class="wwf-button">Adopt a giant panda</span>
+					</h2>
+				</a>
+			</li>
+			<li class="card-wrapper">
+				<a href="https://support.wwf.org.uk/adopt-a-polar-bear">
+					<h2 class="card polar-bear-button" data-pid="2" data-species="polar-bear">
+						<span class="wwf-button">Adopt a polar bear</span>
+					</h2>
+				</a>
+			</li>
+	    </ul>
+	</section>
+	
+    <div class="flipper-container">
+    	<div id="flipper" class="flipper-card">
+	    	<div id="flipper-front" class="flipper-front-container">
+	    		<!-- this is where the card will be cloned into -->
+	    	</div>
+			<div id="flipper-back" class="flipper-back-container">
+				<button id="card-close" class="close button"><span class="visually-hidden">Close</span> &times; </button>
+				<h1>Headline</h1>
+			</div>
+		</div>
+	</div>
+	
+	<div id="curtain" class="curtain"></div>
+	    
+    </body>
+</html>

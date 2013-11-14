@@ -1,0 +1,151 @@
+// main section - the cards themselves
+// ---------------------------------------------------------------
+.gallery {
+    overflow: visible;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.card-wrapper {
+    float: left;
+    padding: 0 0 32.4% 0; // everyone loves the golden ratio, right?
+    position: relative;
+    width: 20%;
+
+    &:nth-child(-n+3) {
+        width: 33%;
+    }
+
+    &:nth-child(2) {
+        width: 34%;
+    }
+
+}
+
+.card {
+    background: @base-light;
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+// the flipper
+// ---------------------------------------------------------------
+.flipper-container {
+    display: none;
+    .perspective(50em);
+    position: static;
+}
+
+.flipper-card {
+    height: 100%;
+    // overflow: hidden; - Turns out that this stops any daughter containers from using backface-visiblity: hidden. Commented for future posterity.
+    position: absolute;
+    .transition(all 500ms cubic-bezier(0.680, -0.200, 0.265, 1.200) ); // if you change the timing, change the timingDelay variable at the start of card-flip.js
+    transform-style: preserve-3d;
+    width: 100%;
+    z-index: 1000;
+}
+
+.flipper-front-container,
+.flipper-back-container { 
+    .backface-visibility(hidden);
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.flipper-front-container {
+    .transform( rotateY(0deg) );
+}
+
+.flipper-back-container {
+    background: @base-light;
+    .transform( rotateY(180deg) );
+}
+
+.flipped,
+.larger {
+    height: ( 640 / 20em ) !important;
+    left: 50% !important;
+    margin-left: ( 0 - ( 480 / 20em )) !important;
+    top: 0;
+    width: ( 960 / 20em ) !important;
+
+    .flipper-front-container {
+        display: none;
+    }
+
+}
+// Using CSS 3D transforms, then falling back to CSS transforms, then falling back to no transforms.
+.csstransforms,
+.csstransforms3d {
+
+    .flipped {
+
+        .flipper-front-container {
+            display: block;
+        }
+    }
+}
+
+.csstransforms {
+
+    .flipped {
+        .transform( rotateY(180deg) );
+    }
+}
+
+.csstransforms3d {
+
+    .flipped {
+        .transform( rotate3d( 0, 1, 0, -180deg ) );
+    }
+}
+
+.cloned {
+    display: none !important;
+}
+
+
+.close.button {
+    border: 0;
+    background: fade(@base-light, 25%);
+    font: 3em/1em 'WWFRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 1em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 1em;
+    
+    &:hover {
+        background: @red-dark;
+    }
+}
+
+// the curtain
+// ---------------------------------------------------------------
+
+.curtain {
+    background: @base-black;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 500;
+}
