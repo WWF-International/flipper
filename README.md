@@ -1,6 +1,6 @@
 # Card flippy thing
 
-Currently being used on http://wwf.org.uk/adoptions/gift-catalogue. So any bugs, let us know!
+Currently being used on http://wwf.org.uk/adoption/gift-catalogue. So any bugs, let us know!
 
 ## Aim
 To have a gallery of images / grid of content that when clicked, make an image flip and turn around, revealing [something] on the back of it.
